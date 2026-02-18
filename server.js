@@ -18,6 +18,9 @@ app.use(
 
 // Routes
 app.use("/api/users", require("./routes/userRoutes"));
+app.get("/", (req, res) => {
+    res.send("Eram Makeover Booking Backend API is running...");
+});
 
 // MongoDB Atlas Connection
 mongoose.connect(process.env.MONGO_URI)
